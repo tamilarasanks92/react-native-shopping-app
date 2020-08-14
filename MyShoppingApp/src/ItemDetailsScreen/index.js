@@ -32,6 +32,7 @@ export default class ItemDetailsScreen extends Component {
                 <Icon style={{ justifyContent: 'center', alignSelf: 'center' }} name={this.state.itemDetails.image} size={256} color="#a00" />
                 <Text style={{ fontSize: 35, fontWeight: 'bold' }}>{this.state.itemDetails.item}</Text>
                 <Text style={{ fontSize: 30 }}>{this.state.itemDetails.price}</Text>
+                <Text style={{ fontSize: 20, top: 20, marginHorizontal: 10 }}>{this.state.itemDetails.description}</Text>
                 <TouchableOpacity style={styles.loginBtn} onPress={() => console.log('Button pressed')}>
                     <Text style={{ color: '#00F' }}>Buy Now</Text>
                 </TouchableOpacity>
@@ -42,9 +43,11 @@ export default class ItemDetailsScreen extends Component {
 
 const styles = StyleSheet.create({
     loginBtn: {
-        margin: 20,
+        position: 'absolute',
         height: 40,
         width: 120,
+        bottom: 40,
+        alignSelf: 'center',
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 1,
